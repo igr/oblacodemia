@@ -1,0 +1,50 @@
+<script>
+function ready(callback) {
+  if (document.readyState !== 'loading') callback();
+  else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
+  else document.attachEvent('onreadystatechange', function () {
+      if (document.readyState === 'complete') callback();
+    });
+}
+function _(selector, src) {
+  if (src === undefined) {
+    src = document;
+  }
+  return src.querySelector(selector);
+}
+function show(elem) {
+  elem.style.display = 'block';
+}
+function hide(elem) {
+  elem.style.display = 'none';
+}
+
+let state = 0;
+ready(() => {
+  const d = document;
+  window.onscroll = function() {
+    const body = d.body;
+    let document = d.documentElement;
+    document = (document.clientHeight) ? document : body;
+    let newState;
+    if (document.scrollTop < document.scrollHeight * 0.4) {
+      newState = 0;
+    }
+    else {
+      newState = 1;
+    }
+    // change
+    if (state !== newState) {
+      if (newState === 0) {
+        show(_('#top'));
+        hide(_('#bottom'));
+      }
+      else {
+        hide(_('#top'));
+        show(_('#bottom'));
+      }
+      state = newState;
+    }
+  };
+});
+</script>
