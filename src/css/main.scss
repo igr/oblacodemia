@@ -104,6 +104,7 @@ h3 {
   width: 100%;
   z-index: 90;
   position: absolute;
+  top:0;
   background-color: var(--red-color);
   padding: 100px 20px 400px 30px;
   @media screen and (min-width: $break-small) {
@@ -112,7 +113,7 @@ h3 {
   border-top: 40px solid var(--black-color);
   border-bottom: 40px solid var(--black-color);
   margin-top: 100vh;
-  margin-bottom: 100vh;
+  margin-bottom: 100vh !important;
 }
 
 p,
@@ -297,3 +298,6 @@ img#h {
   left: 0;
 }
 
+img {
+  -webkit-user-drag: none;
+}
