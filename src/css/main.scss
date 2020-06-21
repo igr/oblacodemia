@@ -8,8 +8,7 @@ $red: #bf2139;
 $night: #282c35;
 $share-color: #444;
 
-@import url('https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Lora:wght@400;700&display=swap');
-$serif-head: 'Lora';
+@import url('https://fonts.googleapis.com/css2?family=Cousine:wght@400;700');
 $monospace: 'Cousine';
 
 $fs: 1.1rem;
@@ -74,7 +73,6 @@ pre {
   font-family: $monospace, monospace;
 }
 
-
 kbd,
 code {
   margin: 0;
@@ -99,7 +97,6 @@ h3 {
   margin: 6rem 0 0.5em 0;
   color: var(--black-color);
   text-transform: uppercase;
-  padding: 0 10px;
   letter-spacing: -3px;
 }
 
@@ -108,10 +105,11 @@ h3 {
   z-index: 90;
   position: absolute;
   background-color: var(--red-color);
-  padding: 100px 10% 400px 50px;
+  padding: 100px 20px 400px 30px;
   @media screen and (min-width: $break-small) {
-    padding: 100px 25% 400px 100px;
+    padding: 100px 100px 400px 100px;
   }
+  border-top: 40px solid var(--black-color);
 }
 
 p,
@@ -162,29 +160,19 @@ pre, table, p, li {
 
 #hello {
   background-color: var(--white-color);
-  height: 120vh;
+  height: 100vh;
 }
 
 #what {
-  transition: left 1000ms cubic-bezier(1, 0, 0, 1) 0ms;
-  position: fixed;
-  top: 200px;
-  left: 100px;
+  background-size: 400px;
+  z-index: 10;
   color: var(--white-color);
-  z-index: 15;
   p {
     color: var(--black-color);
     padding: 0;
     font-size: 1.4em;
-    font-family: $serif-head;
     font-weight: bold;
     margin-left: 30px;
-  }
-  @media screen and (min-width: $break-small) {
-    h2 {
-      font-size: 3rem;
-      line-height: 3rem;
-    }
   }
   h2 {
     font-size: 2rem;
@@ -192,12 +180,20 @@ pre, table, p, li {
     letter-spacing: -2px;
     margin: 0;
   }
+  @media screen and (min-width: $break-small) {
+    h2 {
+      font-size: 4rem;
+      line-height: 3.4rem;
+    }
+  }
+  margin-bottom: 30vh;
+  margin-top: 10vh;
 }
 
 h1 {
   color: var(--black-color);
   position: fixed;
-  z-index: 99;
+  z-index: 10;
   padding: 2rem;
   line-height: 0.8em;
   font-family: $monospace;
@@ -207,47 +203,20 @@ h1 {
   letter-spacing: -10px;
   width: 470px;
   top: 40%;
+  right: 50%;
 
   span {
-    color: var(--white-color);
+    color: var(--red-color);
   }
 
   transform: translate(50%, -50%);
   transition: right 1000ms cubic-bezier(.74,.31,.53,.99) 0ms;
 
   @media screen and (min-width: $break-small) {
-    right: -15%;
     font-size: 12rem;
   }
-  right: -30%;
+
   font-size: 6rem;
-}
-
-#side {
-  background-color: var(--red-color);
-  width: 100%;
-  position: absolute;
-  right: 0;
-  z-index: 5;
-  min-height: 200vh;
-  transition: width 500ms cubic-bezier(1, 0, 0, 1) 0ms;
-}
-
-body.top {
-  #what {
-    left: -100%;
-  }
-  img#k {
-    //transform: rotate(-90deg);
-  }
-}
-body.top2 {
-  h1 {
-    right: 50%;
-  }
-  #side {
-    width: 50%;
-  }
 }
 
 
@@ -260,29 +229,44 @@ body.top2 {
   transform: translateX(-50%) translateY(-50%) rotate(-90deg);
 }
 
-img.divider {
-//  width: 80%;
-  height: 80%;
-  margin: 1em 100px 2em 0;
-  opacity: 0.7;
+.divider {
+  height: 100px;
+  background-size: auto 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.6;
+  margin: 5em 0;
 }
 
 img#k {
-  width: 400px;
+  width: 380px;
+  min-width: 300px;
   position: absolute;
-  top: -140px;
-  left: -40px;
+  top: 30px;
+  left: -10px;
   z-index: -1;
   opacity: 0.7;
-  transition: transform 2000ms cubic-bezier(1, 0, 0, 1) 0ms;
 }
 
 img#w {
-  width: 80vw;
-  position: fixed;
-  top: -10px;
-  left: -40px;
-  z-index: 3;
+  width: 100vw;
+  min-width: 500px;
+  z-index: 1;
   opacity: 0.2;
-  transition: transform 2000ms cubic-bezier(1, 0, 0, 1) 0ms;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+#hey {
+  z-index: 10;
+  background-color: #f1f1f1;
+  color: var(--red-color);
+  font-weight: bold;
+  text-align: center;
+  font-size: 16vw;
+  line-height: 26px;
+  letter-spacing: -2vw;
 }
