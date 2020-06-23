@@ -1,7 +1,8 @@
 {
   "name": "oblacodemia",
   "baseURL": "https://oblacodemia.com",
-  "title": "oblacodemia",
+  "title": "Oblacodemia;",
+  "description": "Radionice za razvoj softverskih veština.",
   "author": {
     "name": "Oblac"
   }
