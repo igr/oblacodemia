@@ -51,10 +51,11 @@
 </head>
 
 <body>
-<div id="head" class="margin"><a href="mailto:oblacodemia@igo.rs" target="_blank">oblacodemia@igo.rs</a><a href="tel:+381641294217" target="_blank">+381641294217</a></div>
+<div id="head" class="margin">{% if not home %}<a href="/">🏠</a>{% endif %}<a href="mailto:oblacodemia@igo.rs" target="_blank">oblacodemia@igo.rs</a><a href="tel:+381641294217" target="_blank">+381641294217</a></div>
 <div style="left:0;" class="margin margin-vert"><div class="inner rotate"><a href="https://oblac.rs" target="_blank">oblac</a></div></div>
 <div style="right:0;" class="margin margin-vert"></div>
 
+{% if home %}
 <div id="hello">
   <div id="top">
     <h1>obla<br>code<br>mia<span>;</span></h1>
@@ -63,7 +64,7 @@
   <div id="bottom" style="display: none;">
     <div id="who">
       <h2 style="letter-spacing: -2px">Oblacodemia<span style="color: var(--red-color)">;</span></h2>
-      <p style="width: 60%">
+      <p style="width: 60%; font-size: 1.4rem;">
         Vodi i organizuje Igor, koji već petnaestak godina održava mahom besplatna predavanja, radionice, konferencije i obuke. Veruje u kulturu deljenja znanja i iskustva.
       </p>
       <img src="/h.png" id="h">
@@ -71,17 +72,15 @@
     <div id="bott" class="margin"></div>
   </div>
 </div>
-{#<div id="hey">#}
-{#  oblacodemia#}
-{#</div>#}
+{% endif %}
+
 <div class="container">
-  <div id="what">
-    <img src="/k.png" id="k">
-    <h2 style="color: var(--white-color)">Radionice za razvoj<br>softverskih veština.</h2>
-  </div>
   {% block main %}{% endblock %}
 </div>
+
+{% if home %}
 <div style="height: 100vh;"></div>
+{%  endif %}
 
 {% include "partials/js.njk" %}
 

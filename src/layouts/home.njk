@@ -1,15 +1,20 @@
 {% extends "base.njk" %}
 
 {% block main %}
+
+  <div id="what">
+    <img src="/k.png" id="k">
+    <h2 style="color: var(--white-color)">Radionice za razvoj<br>softverskih veština.</h2>
+  </div>
   <h3 class="heading">Clean code<span>;</span></h3>
   <p class="home">
-    Pitka, poučna, interaktivna vežba pronalaženja obrazaca koji umanjuju vrednost koda.<br>
-    Namenjeno svima koji su idu putem softverskog inženjera.<br>
+    Pitka, poučna, interaktivna vežba pronalaženja obrazaca koji umanjuju vrednost koda. Namenjeno svima koji su idu putem softverskog inženjera.<br>
+    <a href="clean-code">Više o radionici...</a>
   </p>
   <p>
-    👩‍💼 : <code>16</code> polaznika<br>
-    ⏰ : <code>1</code> dan<br>
-    🎟 : <code>1990€</code> / <code>besplatno</code> za non-profit & edu
+    👩‍💼 : <code>{{ site.data.ws.cleancode.people }}</code> polaznika<br>
+    ⏰ : <code>{{ site.data.ws.cleancode.duration }}h</code><br>
+    🎟 : <code>{{ site.data.ws.cleancode.price }}€</code> / <code>besplatno</code> za non-profit & edu
   </p>
 
   <div class="divider" style="background-image: url(/s1.png)"></div>
@@ -21,23 +26,23 @@
     Kurikulum: 1) osnove 2) Dockerfile 3) debug 4) docker-compose 5) network 6) volume 7) primer 8) swarm orkestracija<br>
   </p>
   <p>
-    👩‍💼 : <code>12</code> polaznika<br>
-    ⏰ : <code>4</code> sata<br>
-    🎟 : <code>1190€</code> / <code>besplatno</code> za non-profit & edu
+    👩‍💼 : <code>{{ site.data.ws.docker.people }}</code> polaznika<br>
+    ⏰ : <code>{{ site.data.ws.docker.duration }}h</code><br>
+    🎟 : <code>{{ site.data.ws.docker.price }}€</code> / <code>besplatno</code> za non-profit & edu
   </p>
 
   <div class="divider" style="background-image: url(/s2.png)"></div>
 
   <h3 class="heading">Test Driven Development<span>;</span></h3>
   <p class="home">
-    Najbolji način razumevanja Test Driven Development-a je upravo njegova primena.<br>
-    Primeri se rade u Javi, ali je moguće pratiti i sa drugim programskim jezicima.<br>
+    Najbolji način razumevanja Test Driven Development-a je upravo njegova primena.
+    Primeri se rade u Javi, ali je moguće pratiti i sa drugim programskim jezicima.
     Kurikulum: 1) kate koje naglašavaju različite aspekte TDD-a 2) razumevanje TDD ciklusa 3) BDD
   </p>
   <p>
-    👩‍💼 : <code>16</code> polaznika<br>
-    ⏰ : <code>1</code> dan<br>
-    🎟 : <code>1490€</code> / <code>besplatno</code> za non-profit & edu
+    👩‍💼 : <code>{{ site.data.ws.tdd.people }}</code> polaznika<br>
+    ⏰ : <code>{{ site.data.ws.tdd.duration }}h</code><br>
+    🎟 : <code>{{ site.data.ws.tdd.price }}€</code> / <code>besplatno</code> za non-profit & edu
   </p>
 
   <div class="divider" style="background-image: url(/s3.png)"></div>

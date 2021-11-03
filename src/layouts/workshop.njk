@@ -1,0 +1,29 @@
+{% extends "base.njk" %}
+
+{% block main %}
+  <style>
+    .container {
+      position: unset;
+      margin-top: 40px;
+    }
+    .container:after {
+      height: 0;
+    }
+    h3 {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+  </style>
+  <h2>{{ title }}<span>;</span></h2>
+
+  <div>
+  👩‍💼 <code>{{ site.data.ws[tag].people }}</code> polaznika /
+  ⏰ <code>{{ site.data.ws[tag].duration }}h</code> /
+  🎟 <code>{{ site.data.ws[tag].price }}€</code>
+  </div>
+
+  {{ content | safe }}
+
+
+
+{% endblock %}
