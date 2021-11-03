@@ -11,8 +11,8 @@ $share-color: #444;
 @import url('https://fonts.googleapis.com/css2?family=Cousine:wght@400;700');
 $monospace: 'Cousine';
 
-$fs: 1.1rem;
-$fs-large: 1.2rem;
+$fs: 1.2rem;
+$fs-large: 1.5rem;
 $std-margin: 0 0 1rem;
 $break-small: 800px;
 
@@ -20,6 +20,7 @@ $break-small: 800px;
   --white-color: #f1f1f1;
   --black-color: #303030;
   --red-color: #bf2139;
+  --gray-color: #e1e1e1;
 }
 
 *,
@@ -91,14 +92,34 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
-  line-height: 2.4rem;
+  font-size: 3.5rem;
+  line-height: 3rem;
   font-family: $monospace, sans-serif;
   margin: 6rem 0 0.5em 0;
   color: var(--black-color);
   text-transform: uppercase;
   letter-spacing: -3px;
+  span {
+    color: var(--red-color);
+  }
+
 }
+p.home {
+  font-size: 1.2rem;
+}
+
+.heading {
+  display: inline;
+  padding: 0 10px;
+  background-color: #fff;
+  position: relative;
+  left: -10px;
+  @media screen and (min-width: $break-small) {
+    left: -60px;
+    padding-left: 60px;
+  }
+}
+
 
 .container {
   width: 100%;
