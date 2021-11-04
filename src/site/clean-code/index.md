@@ -1,6 +1,5 @@
 ---
 layout: "workshop"
-title: "Clean Code"
 tag: cleancode
 ---
 
