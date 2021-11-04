@@ -94,7 +94,7 @@ h2 {
 
 h3 {
   font-size: 3.5rem;
-  line-height: 3rem;
+  line-height: 3.4rem;
   font-family: $monospace, sans-serif;
   margin: 6rem 0 0.5em 0;
   color: var(--black-color);
@@ -108,11 +108,14 @@ h3 {
 p.home {
   font-size: 1.2rem;
   a {
-    border: 2px solid var(--gray-color);
+    border: 4px solid var(--gray-color);
     background-color: var(--gray-color);
     color: var(--black-color);
     border-radius: 4px;
-    padding: 2px 10px;
+    padding: 4px 10px 2px 10px;
+  }
+  a:hover {
+    color: var(--white-color);
   }
 }
 
@@ -120,12 +123,12 @@ p.home {
   display: inline;
   padding: 0 10px;
   //background-color: #fff;
-  position: relative;
-  left: -10px;
-  @media screen and (min-width: $break-small) {
-    left: -60px;
-    padding-left: 60px;
-  }
+  //position: relative;
+  //left: -10px;
+  //@media screen and (min-width: $break-small) {
+  //  left: -60px;
+  //  padding-left: 60px;
+  //}
   &:before {
     content: '▊';
   }
@@ -339,11 +342,12 @@ img#w {
 img#h {
   width: 40vw;
   min-width: 300px;
-  z-index: 1;
+  z-index: -1;
   opacity: 0.2;
   position: fixed;
   top: 20%;
   left: 0;
+  pointer-events: none;
 }
 
 img {
