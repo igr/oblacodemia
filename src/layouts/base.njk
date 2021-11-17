@@ -5,7 +5,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
-  <meta name="author" content="igor">
+  <meta name="author" content="igo.rs">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
@@ -28,13 +28,20 @@
   <title>{{ site.title }}</title>
   <meta property="og:title" content="{{ site.title }}">
   <meta property="og:type" content="website">
-  <meta name="description" content="{{ site.description }}">
-  <meta property="og:description" content="{{ site.description }}"/>
+  <meta name="description" content="{{ description if description else site.description }}">
+  <meta property="og:description" content="{{ description if description else site.description }}"/>
+  <meta name="twitter:description" content="{{ description if description else site.description }}" />
 
   <meta property="og:locale" content="sr_RS"/>
   <meta property="og:url" content="{{ link }}">
-  <meta property="og:site_name" content="Oblac"/>
-  <meta property="og:image" content="{{site.baseURL}}/og.png"/>
+  <meta property="og:site_name" content="{{ site.title }}"/>
+  {% if tag %}
+    <meta property="og:image" content="{{site.baseURL}}/og-{{ tag }}.png"/>
+    <meta name="twitter:image" content="{{site.baseURL}}/og-{{ tag }}.png" />
+  {% else %}
+    <meta property="og:image" content="{{site.baseURL}}/og.png"/>
+    <meta name="twitter:image" content="{{site.baseURL}}/og.png" />
+  {% endif %}
   <meta name="twitter:card" content="summary_large_image"/>
 
   <link rel='stylesheet' href="/css/main.css" type='text/css' media='all'/>

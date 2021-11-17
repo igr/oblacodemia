@@ -1,6 +1,7 @@
 ---
 layout: "workshop"
 tag: cleancode
+description: "Clean Code radionica se bavi neprijatnim mirisima u programskom kodu i njihovim pragmatičnim uklanjanjem."
 ---
 
 ### Opis Radionice

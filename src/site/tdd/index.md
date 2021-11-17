@@ -1,6 +1,7 @@
 ---
 layout: "workshop"
 tag: tdd
+description: "TDD je popularna praksa softverskog inženjerstva koju je najbolje razumeti upravo upotrebom."
 ---
 
 ### Opis Radionice

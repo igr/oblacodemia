@@ -1,6 +1,7 @@
 ---
 layout: "workshop"
 tag: docker
+description: "Docker radionica pruža pragmatično znanje rada sa Dockerom."
 ---
 
 ### Opis Radionice
