@@ -2,19 +2,25 @@
   "cleancode": {
     "name": "Clean code",
     "price": "1990",
-    "people": 16,
+    "people": "16",
     "duration": 6
   },
   "docker": {
     "name": "Docker",
     "price": "1190",
-    "people": 12,
+    "people": "12",
     "duration": 4
   },
   "tdd": {
     "name": "Test-Driven Development",
     "price": "1490",
-    "people": 16,
+    "people": "16",
     "duration": 6
+  },
+  "pitalice": {
+    "name": "Java Pitalice",
+    "price": "250",
+    "people": "20+",
+    "duration": 2
   }
 }
