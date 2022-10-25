@@ -1,7 +1,7 @@
 {
   "cleancode": {
     "name": "Clean code",
-    "price": "1990",
+    "price": "2490",
     "people": "16",
     "duration": 6
   },
@@ -19,7 +19,7 @@
   },
   "pitalice": {
     "name": "Java Pitalice",
-    "price": "250",
+    "price": "550",
     "people": "20+",
     "duration": 2
   }
